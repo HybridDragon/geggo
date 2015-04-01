@@ -1,0 +1,8 @@
+#front-spash {
+	height: 100%;
+}
+
+#front-spash-content {
+	height: 210px;
+	top: calc(50% - 105px);
+}

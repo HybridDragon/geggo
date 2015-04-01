@@ -1,0 +1,145 @@
+@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 900;
+	src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), 
+	url(//fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGHZhYM0_6AejPZE-OqA592o.woff2) format('woff2'), 
+	url(//fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGHiec-hVyr2k4iOzEQsW1iE.woff) format('woff');
+}
+
+html {
+	height: 100%;
+	box-sizing: border-box;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	margin: 0;
+	height: 100%;
+	color: #3A4153;
+	background-color: #eee;
+}
+
+p {
+	font-size: 14px;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+	font-weight: 600;
+}
+
+h1 {
+	margin: 10px 0;
+	font-size: 30px;
+}
+
+h2 {
+	margin: 8px 0;
+	font-size: 26px;
+}
+
+h3 {
+	margin: 6px 0;
+	font-size: 22px;
+}
+
+h4 {margin: 4px 0;
+	font-size: 18px;
+}
+
+h5 {
+	margin: 2px 0;
+	font-size: 14px;
+}
+
+h6 {
+	margin: 0;
+	font-size: 8px;
+}
+
+i,
+em {
+	font-style: italic;
+}
+
+b,
+strong {
+	font-weight: 600;
+}
+
+a {
+	font-size: 14px;
+	text-decoration: underline;
+	transition: color 0.15s;
+	-webkit-transition: color 0.15s;
+}
+
+.container {
+	min-width: 640px;
+	max-width: 1280px;
+	margin: 0 auto !important;
+}
+
+#main-menu {
+	z-index: 1;
+	width: 100%;
+	height: 70px;
+	position: fixed;
+	background-color: #3A4153;
+	border-bottom: 1px solid #eee;
+}
+
+#main-menu ul {
+	margin: 0;
+	padding: 0;
+	height: 70px;
+	display: flex;
+	line-height: 70px;
+	align-items: center;
+	list-style-type: none;
+}
+
+#main-menu li {
+	margin: 0 10px;
+	text-align: center;
+	display: inline-block;
+}
+
+#main-menu ul > li {
+	flex: 1;
+}
+
+#main-menu a {
+	color: #eee;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+#main-menu a:hover {
+	color: #ccc;
+}
+
+#page-header {
+	height: 200px;
+	margin-top: 80px;
+	background-color: #3A4153;
+}
+
+#page-header-content {
+	color: #eee;
+}
+
+#page-title {
+	margin: 6px;
+	font-size: 48px;
+	font-weight: 900;
+	font-family: 'Source Sans Pro', sans-serif;
+}

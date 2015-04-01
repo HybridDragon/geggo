@@ -11,4 +11,6 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'BaseController@welcome');
+
+Route::get('/error/{error_id}', 'BaseController@errors');
