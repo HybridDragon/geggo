@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>{{ $page_name }} | {{ Config::get('app.name') }}</title>
+		<title>{{ $page_title }} | {{ Config::get('app.name') }}</title>
 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=640px, initial-scale=1">
@@ -63,10 +63,32 @@
 
 		
 		<section id="content">
-			<main class="container">
-				@yield('content')
+			<main id="content-container" class="container">
+				<article>
+					@yield('content')
+				</article>
+				
+				<aside id="sidebar">
+					<ul>
+						<li>
+							<a href="#">Section 1</a>
+						</li>
+						<li>
+							<a href="#">Section 2</a>
+						</li>
+						<li>
+							<a href="#">Section 3</a>
+						</li>
+						<li>
+							<a href="#">Section 4</a>
+						</li>
+					</ul>
+				</aside>
 			</main>
+
+			
 		</section>
+
 
 		@section('javascript')
 			<script src="{{ Config::get('app.assets_url') }}/js/jquery.min.js" async></script>
