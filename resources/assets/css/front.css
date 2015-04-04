@@ -11,11 +11,11 @@
 
 #front-spash {
 	height: calc(100% - 80px);
-	background-color: #3A4153;
+	background-color: #fff;
 }
 
 #front-spash-content {
-	color: #eee;
+	color: #3A4153;
 	height: 160px;
 	width: 640px;
 	text-align: center;

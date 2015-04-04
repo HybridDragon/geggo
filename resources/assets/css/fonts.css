@@ -1,4 +1,22 @@
 @font-face {
+	font-family: 'Sniglet';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Sniglet Regular'), local('Sniglet-Regular'), 
+	url(//fonts.gstatic.com/s/sniglet/v7/lHhyjBgrvbE7Y_C6XNlBow.woff2) format('woff2'), 
+	url(//fonts.gstatic.com/s/sniglet/v7/zaGgxcO7SfusqT6GpDlcHg.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Sniglet';
+	font-style: normal;
+	font-weight: 800;
+	src: local('Sniglet ExtraBold'), local('Sniglet-ExtraBold'), 
+	url(//fonts.gstatic.com/s/sniglet/v7/1ZHjsYpklbehZSiZpN0bvvk_vArhqVIZ0nv9q090hN8.woff2) format('woff2'), 
+	url(//fonts.gstatic.com/s/sniglet/v7/1ZHjsYpklbehZSiZpN0bvhsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
+
+@font-face {
 	font-family: 'Open Sans';
 	font-style: normal;
 	font-weight: 400;
