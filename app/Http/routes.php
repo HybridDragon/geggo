@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'BaseController@welcome');
-Route::get('/error/{error_id}', 'BaseController@errors');
+Route::any('/error/{error_id}', 'BaseController@errors');
 
 
 Route::get('/about', 'StaticController@about');
