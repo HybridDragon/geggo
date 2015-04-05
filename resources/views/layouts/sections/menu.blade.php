@@ -9,6 +9,9 @@
 			<a href="/browse">browse</a>
 		</li>
 		<li>
+			<a href="/features">features</a>
+		</li>
+		<li>
 			<a href="/about">about</a>
 		</li>
 		<li>
