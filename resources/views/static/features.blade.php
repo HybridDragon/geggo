@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-	<p>Here is a list of features that will be available and their inmplementation progress.</p>
+	<p>Here is a list of features that will be available and their implementation progress.</p>
 	<br>
 	<h3>To do:</h3>
 	<ol>
