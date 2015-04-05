@@ -1,9 +1,19 @@
 @extends('layouts.main')
 
+@section('sidebar')
+    <ul>
+		<li>
+			<a href="#to-do">To Do</a>
+		</li>
+	</ul>
+@stop
+
 @section('content')
 	<p>Here is a list of features that will be available and their implementation progress.</p>
 	<br>
-	<h3>To do:</h3>
+	<a id="to-do">
+		<h3>To Do</h3>
+	</a>
 	<ol>
 		<li>No censorship</li>
 		<li>Anonymous sharing</li>

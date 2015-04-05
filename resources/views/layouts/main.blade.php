@@ -28,22 +28,23 @@
 				<article>
 					@yield('content')
 				</article>
-				
-				<aside id="sidebar">
-					<ul>
-						<li>
-							<a href="#">Section 1</a>
-						</li>
-						<li>
-							<a href="#">Section 2</a>
-						</li>
-						<li>
-							<a href="#">Section 3</a>
-						</li>
-						<li>
-							<a href="#">Section 4</a>
-						</li>
-					</ul>
+        		<aside id="sidebar">
+					@section('sidebar')
+						<ul>
+							<li>
+								<a href="#">Section 1</a>
+							</li>
+							<li>
+								<a href="#">Section 2</a>
+							</li>
+							<li>
+								<a href="#">Section 3</a>
+							</li>
+							<li>
+								<a href="#">Section 4</a>
+							</li>
+						</ul>
+					@show
 				</aside>
 			</main>
 
