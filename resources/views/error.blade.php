@@ -6,7 +6,6 @@
 @stop
 
 @section('splash-content')
-	<h1 id="front-splash-logo">Error code: {{ $error_id }}</h1>
-	<h1 id="front-splash-logo">aka: {{ $error_name }}</h1>
+	<h2 id="front-splash-logo">Error code: {{ $error_id }} aka &quot;{{ $error_name }}&quot;</h2>
 	<p>{{ $error_desc }}</p>
 @stop

@@ -25,7 +25,7 @@ body {
 }
 
 p {
-	margin: 10px 0;
+	margin: 10px 0 20px;
 }
 
 h1, 
@@ -136,20 +136,9 @@ form input[type=submit]:active {
 }
 
 form aside {
-	flex: 2;
+	flex: 1;
 	margin-left: 40px;
 	display: inline-block;
-	background-color: #fff;
-}
-
-form aside p {
-	color: #fff;
-	margin: 10px;
-	display: none;
-}
-
-form aside #signup-tips {
-	display: block;
 }
 
 .container {
@@ -250,6 +239,11 @@ form aside #signup-tips {
 
 #sidebar li {
 
+}
+
+#sidebar hr {
+	border: none;
+	border-bottom: 1px solid #cacaca;
 }
 
 #sidebar a {

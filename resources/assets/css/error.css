@@ -1,8 +1,14 @@
-#front-spash {
-	height: 100%;
+#front-spash-content {
+	height: 160px;
+	top: calc(50% - 60px);
 }
 
-#front-spash-content {
-	height: 210px;
-	top: calc(50% - 105px);
+#front-splash-logo {
+	display: block;
+	text-align: left;
+}
+
+#front-spash-content p {
+	line-height: 32px; 
+	text-align: right;
 }

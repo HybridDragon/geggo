@@ -6,6 +6,9 @@
 			<a href="#to-do">To Do</a>
 		</li>
 	</ul>
+	<hr>
+	<br>
+	@parent
 @stop
 
 @section('content')
