@@ -3,10 +3,11 @@
 class StaticController extends Controller {
 	public function about()
 	{
-		$data = [
-			'page_title' => "about"
-		]; 
+		return view('static.about', ['page_title' => "about"]);
+	}
 
-		return view('static.about', $data);
+	public function features()
+	{
+		return view('static.features', ['page_title' => "features"]);
 	}
 }
