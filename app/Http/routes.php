@@ -10,14 +10,12 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('/features', 'StaticController@features');
+
 Route::get('/', 'BaseController@welcome');
 Route::any('/error/{error_id}', 'BaseController@errors');
 
-
 Route::get('/about', 'StaticController@about');
+Route::get('/features', 'StaticController@features');
 
-
-Route::match(['get', 'post'], '/auth/signup', 'AuthController@signup');
-Route::match(['get', 'post'], '/auth/login', 'AuthController@login');
+Route::controller('/auth', 'AuthController');
 Route::controller('/user', 'UserController');
