@@ -20,3 +20,4 @@ Route::get('/about', 'StaticController@about');
 
 Route::match(['get', 'post'], '/auth/signup', 'AuthController@signup');
 Route::match(['get', 'post'], '/auth/login', 'AuthController@login');
+Route::controller('/user', 'UserController');
