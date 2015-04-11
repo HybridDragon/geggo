@@ -89,16 +89,15 @@ a:active {
 }
 
 form {
-	display: flex;
+	
 }
 
 form div {
-	flex: 1;
-	min-width: 182px;
-	display: inline-block;
+	display: flex;
 }
 
 form input {
+	flex: 1;
 	margin: 0;
 	padding: 10px;
 	color: #3A4153;
@@ -119,8 +118,9 @@ form input:focus {
 form input[type=text],
 form input[type=email],
 form input[type=password] {
-	width: calc(100% - 22px);
-	min-width: 160px;
+	max-height: 19px;
+	min-width: 180px;
+	display: inline-block;
 }
 
 form input[type=submit] {
@@ -132,13 +132,16 @@ form input[type=submit] {
 form input[type=submit]:active {
 	background-color: #eee;
 	box-shadow: inset 0 0 8px #bbb;
-
 }
 
 form aside {
 	flex: 1;
 	margin-left: 40px;
 	display: inline-block;
+}
+
+form aside p {
+	margin: 0;
 }
 
 .container {
