@@ -1,6 +1,14 @@
 @extends('layouts.main')
 
 @section('sidebar')
+	<ul>
+		<li>
+			<a href="#to-do">To do</a>
+		</li>
+	</ul>
+	<br>
+	<hr>
+	<br>
 	@include("static.sidebar")
 	@parent
 @stop
