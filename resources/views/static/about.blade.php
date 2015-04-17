@@ -1,5 +1,10 @@
 @extends('layouts.main')
 
+@section('sidebar')
+	@include("static.sidebar")
+	@parent
+@stop
+
 @section('content')
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed sem scelerisque, rhoncus purus in, venenatis felis. Suspendisse facilisis pharetra diam gravida sagittis. Sed accumsan feugiat arcu, non lobortis mauris vestibulum sed. Praesent sit amet condimentum mi, ut iaculis diam. Vivamus bibendum, neque eget pulvinar efficitur, nisi turpis gravida neque, vel <a href="#">volutpat</a> massa velit quis lacus. Vestibulum et mi nibh. Integer sodales lobortis nisl id dictum. Proin sit amet erat et elit cursus pellentesque egestas at nunc. Sed eleifend turpis nisi, iaculis ultricies est placerat ac. Pellentesque odio nibh, facilisis ac <a href="#">tristique dictum</a>, varius at ipsum. Curabitur id posuere mauris. Donec vehicula libero sit amet nisi commodo, non volutpat risus molestie.</p>
 	<p>Suspendisse lacinia libero eget porta pulvinar. Proin non ante libero. Aliquam ac fringilla risus. Vivamus venenatis lacus non magna volutpat, sed pellentesque urna molestie. Mauris malesuada in est at pretium. Aenean finibus libero in sapien finibus facilisis. Phasellus <a href="#">lacinia</a> eros quis justo molestie tincidunt. Donec eget congue sapien, vel dictum erat. Vivamus ullamcorper sit amet nunc eu blandit. Etiam ut egestas diam. Nulla volutpat arcu nulla, eget tristique sem suscipit id. Proin sed hendrerit massa.</p>
