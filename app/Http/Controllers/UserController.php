@@ -28,4 +28,8 @@ class UserController extends Controller {
 		return view('user.settings', ['page_title' => "settings"]);
 	}
 
+	public function getAccount()
+	{
+		return view('user.account', ['page_title' => "account"]);
+	}
 }
