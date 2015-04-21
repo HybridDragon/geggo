@@ -1,5 +1,10 @@
 @extends('layouts.main')
 
+@section('sidebar')
+	@include("auth.sidebar")
+	@parent
+@stop
+
 @section('content')
 	<form name="login" method="post" action="{{ secure_url('/auth/login') }}">
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
