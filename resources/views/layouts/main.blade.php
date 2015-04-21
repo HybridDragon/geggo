@@ -9,7 +9,6 @@
 
 		@section('stylesheets')
 			<link rel="stylesheet" href="{{ Config::get('app.assets_url') }}/css/main.css">
-			<link rel="stylesheet" href="{{ Config::get('app.assets_url') }}/css/front.css">
 			<link rel="stylesheet" href="{{ Config::get('app.assets_url') }}/css/fonts.css">
 		@show
 	</head>
