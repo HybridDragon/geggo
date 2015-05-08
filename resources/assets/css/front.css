@@ -1,3 +1,12 @@
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Open Sans Light'), local('OpenSans-Light'),
+	url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTegdm0LZdjqr5-oayXSOefg.woff2) format('woff2'),
+	url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+
 #main-menu {
 	position: fixed;
 	border-bottom: 1px solid #eee;
@@ -40,7 +49,6 @@
 	font-weight: 300;
 
 	/* Uncomment lines below if no splash logo */
-	height: 100%; 
-	line-height: 160px; 
+	height: 100%;
+	line-height: 160px;
 }
-
