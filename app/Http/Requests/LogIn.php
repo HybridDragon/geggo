@@ -11,15 +11,7 @@ class LogIn extends Request {
 	 */
 	public function authorize()
 	{
-		if($this->auth->guest())
-		{
-			return true;
-		}
-
-		else
-		{
-			return false;
-		}
+		return true;
 	}
 
 	/**
@@ -30,9 +22,9 @@ class LogIn extends Request {
 	public function rules()
 	{
 		return [
-			'username' => 'required',
-			'password' => 'required',
-		];	
+			'username' => ['required'],
+			'password' => ['required']
+		];
 	}
 
 }

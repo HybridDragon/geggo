@@ -11,15 +11,7 @@ class SignUp extends Request {
 	 */
 	public function authorize()
 	{
-		if($this->auth->guest())
-		{
-			return true;
-		}
-
-		else
-		{
-			return false;
-		}
+		return true;
 	}
 
 	/**
@@ -30,10 +22,24 @@ class SignUp extends Request {
 	public function rules()
 	{
 		return [
-			'username' => 'required',
-			'email' => 'required',
-			'password' => 'required',
-			'password_confirm' => 'required'
+			'username' => [
+				'required',
+				'min: 2',
+				'max: 16',
+				'alpha_dash',
+				'not_in: admin'
+			],
+			'email' => [
+				'required',
+				'max: 254',
+				'email'
+			],
+			'password' => [
+				'required',
+				'min: 6',
+				'max: 50',
+				'confirmed'
+			],
 		];
 	}
 

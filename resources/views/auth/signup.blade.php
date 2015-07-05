@@ -6,6 +6,18 @@
 @stop
 
 @section('content')
+	@if($errors->any())
+		<aside id="errors">
+			<p>One or more errors occurred</p>
+			<ul>
+				@foreach($errors->all() as $error)
+					<li>{{ $error }}</li>
+				@endforeach
+			</ul>
+		</aside>
+		<br>
+	@endif
+
 	<form name="signup" method="post" action="{{ secure_url('/auth/signup') }}">
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
@@ -35,9 +47,9 @@
 
 		<h4>Password confirmation</h4>
 		<div>
-			<input type="password" name="password-confirm" required placeholder="your password again">
+			<input type="password" name="password_confirmation" required placeholder="your password again">
 			<aside>
-				<p>We're noting down your password again so that it's correct and we don't save an incorrect password.</p>
+				<p>We're noting down your password again so that we don't save an incorrect password.</p>
 			</aside>
 		</div>
 

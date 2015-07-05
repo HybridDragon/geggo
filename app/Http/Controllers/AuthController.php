@@ -1,44 +1,75 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Requests\Request;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+
+use Illuminate\Http\Request;
+
+use App\Http\Requests\SignUp;
+use App\Http\Requests\LogIn;
+
+use App\User;
+
+use Auth;
 
 class AuthController extends Controller {
-	public function __construct()
-	{
-		$this->middleware('guest');
-	}
+    public function __construct()
+    {
+        $this->middleware('guest', ['except' => ['getLogout']]);
+        $this->middleware('auth', ['only' => ['getLogout']]);
+    }
 
-	public function getSignup()
-	{
-		return view('auth.signup', ['page_title' => "signup"]);
-	}
+    public function getSignup()
+    {
+        return view('auth.signup', ['page_title' => "signup"]);
+    }
 
-	public function postSignup(SignUp $signup)
-	{
-		//$signup_data = [
-		//	'page_title' => "signup",
-		//	'username' => $_POST['username'],
-		//	'email' => $_POST['email'],
-		//	'password' => $_POST['password'],
-		//	'password_confirm' => $_POST['password-confirm'],
-		//];
+    public function postSignup(SignUp $signup)
+    {
+        $signup_data = [
+            'username' => $_POST['username'],
+            'password' => $_POST['password']
+        ];
 
-		return view('auth.signup', $signup_data);
-	}
+        $user = new User;
+        $user->id = hash("crc32", $_POST['username']);
+        $user->username = $_POST['username'];
+        $user->email = $_POST['email'];
+        $user->password = bcrypt($_POST['password']);
 
-	public function getLogin()
-	{
-		return view('auth.login', ['page_title' => "log in"]);
-	}
+        if($user->save())
+        {
+            Auth::attempt($signup_data, 1);
+            return redirect('user/dashboard');
+        }
+    }
 
-	public function postLogin(LogIn $login)
-	{
-		//$login_data = [
-		//	'page_title' => "log in",
-		//	'username' => $_POST['username'],
-		//	'password' => $_POST['password'],
-		//];
+    public function getLogin()
+    {
+        return view('auth.login', ['page_title' => "log in"]);
+    }
 
-		return view('auth.login', $login_data);
-	}
+    public function postLogin(LogIn $login)
+    {
+        $login_data = [
+            'username' => $_POST['username'],
+            'password' => $_POST['password']
+        ];
+
+        if(Auth::attempt($login_data, 1))
+        {
+            return redirect()->intended('user/dashboard');
+        }
+
+        else
+        {
+            return "Login failed.";
+        }
+    }
+
+    public function getLogout()
+    {
+        Auth::logout();
+        return redirect('/');
+    }
 }
