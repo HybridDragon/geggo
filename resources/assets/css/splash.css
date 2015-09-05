@@ -1,0 +1,60 @@
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Open Sans Light'), local('OpenSans-Light'),
+	url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTegdm0LZdjqr5-oayXSOefg.woff2) format('woff2'),
+	url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+
+#main-menu {
+	position: fixed;
+	border-bottom: 1px solid #eee;
+}
+
+.page {
+	width: 100%;
+	height: 100%;
+	display: block;
+	background-color: #eee;
+}
+
+#front-content,
+#error-content {
+	color: #3A4153;
+	height: 160px;
+	width: 640px;
+	text-align: center;
+	position: absolute;
+	top: calc(50% - 45px);
+	left: calc(50% - 320px);
+}
+
+#filedrop #front-content {
+	height: 40px;
+	width: 300px;
+	top: calc(50% - 20px);
+	left: calc(50% - 150px);
+}
+
+#front-logo,
+#error-logo {
+	margin: 6px;
+	font-size: 40px;
+	font-weight: 900;
+	font-family: 'Source Sans Pro', sans-serif;
+
+	/* Uncomment line below for no splash logo */
+	display: none;
+}
+
+#front-content p,
+#error-content p {
+	margin: 6px;
+	font-size: 22px;
+	font-weight: 300;
+
+	/* Uncomment lines below if no splash logo */
+	height: 100%;
+	line-height: 160px;
+}

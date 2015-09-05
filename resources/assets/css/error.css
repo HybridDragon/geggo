@@ -1,0 +1,14 @@
+#error-content {
+	height: 160px;
+	top: calc(50% - 60px);
+}
+
+#error-logo {
+	display: block;
+	text-align: left;
+}
+
+#error-content p {
+	line-height: 32px;
+	text-align: right;
+}
