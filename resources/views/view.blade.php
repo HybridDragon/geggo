@@ -6,10 +6,9 @@
 @stop
 
 @section('splash-content')
-    <header class="page" id="error">
+    <header class="page" id="view">
         <main id="error-content">
-            <h2 id="error-logo">Error code: {{ $error_id }} aka &quot;{{ $error_name }}&quot;</h2>
-            <p>{{ $error_desc }}</p>
+            <h2 id="error-logo">File id: {{ $file->id }}</h2>
         </main>
     </header>
 @stop

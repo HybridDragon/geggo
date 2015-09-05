@@ -1,20 +1,30 @@
 <?php namespace App\Http\Controllers;
 
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+
+use Illuminate\Http\Request;
+
 class BaseController extends Controller {
 	public function welcome()
 	{
 		return view('welcome');
 	}
 
+	public function paste()
+	{
+		return view('paste', ['page_title' => "paste"]);
+	}
+
 	public function errors($error_id)
 	{
 		$error_name = [
-			'400' => "Bad Request",
+			'400' => "Bad request",
 			'401' => "Unauthorized",
 			'403' => "Forbidden",
 			'404' => "Not found",
-			'405' => "Method Not Allowed",
-			'408' => "Request Timeout",
+			'405' => "Method not allowed",
+			'408' => "Request timeout",
 			'418' => "I'm a teapot"
 		];
 
@@ -31,7 +41,8 @@ class BaseController extends Controller {
 		$error = [
 			'error_id' => $error_id,
 			'error_name' => $error_name[$error_id],
-			'error_desc' => $error_desc[$error_id]
+			'error_desc' => $error_desc[$error_id],
+			'page_title' => "error {$error_id}"
 		];
 
 		return view('error', $error);

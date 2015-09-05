@@ -1,14 +1,14 @@
-#front-spash-content {
+#error-content {
 	height: 160px;
 	top: calc(50% - 60px);
 }
 
-#front-splash-logo {
+#error-logo {
 	display: block;
 	text-align: left;
 }
 
-#front-spash-content p {
-	line-height: 32px; 
+#error-content p {
+	line-height: 32px;
 	text-align: right;
 }

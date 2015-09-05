@@ -36,6 +36,9 @@ class UserController extends Controller {
 
     public function getAccount()
     {
-        return view('user.account', ['page_title' => "account"]);
+        return view('user.account', [
+            'page_title' => "account",
+            'username' => Auth::user()['username']
+        ]);
     }
 }

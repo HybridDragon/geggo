@@ -37,6 +37,10 @@ class AuthController extends Controller {
         $user->email = $_POST['email'];
         $user->password = bcrypt($_POST['password']);
 
+        $storage_path = storage_path();
+        mkdir($storage_path."/uploads/".$user->id);
+        chmod($storage_path."/uploads/".$user->id, 0755);
+
         if($user->save())
         {
             Auth::attempt($signup_data, 1);

@@ -16,24 +16,29 @@
 	width: 100%;
 	height: 100%;
 	display: block;
-}
-
-#front-spash {
-	height: 100%;
 	background-color: #eee;
 }
 
-#front-spash-content {
+#front-content,
+#error-content {
 	color: #3A4153;
 	height: 160px;
 	width: 640px;
 	text-align: center;
 	position: absolute;
-	top: calc(50% - 80px);
+	top: calc(50% - 45px);
 	left: calc(50% - 320px);
 }
 
-#front-splash-logo {
+#filedrop #front-content {
+	height: 40px;
+	width: 300px;
+	top: calc(50% - 20px);
+	left: calc(50% - 150px);
+}
+
+#front-logo,
+#error-logo {
 	margin: 6px;
 	font-size: 40px;
 	font-weight: 900;
@@ -43,7 +48,8 @@
 	display: none;
 }
 
-#front-spash-content p {
+#front-content p,
+#error-content p {
 	margin: 6px;
 	font-size: 22px;
 	font-weight: 300;

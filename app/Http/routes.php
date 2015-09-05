@@ -21,7 +21,7 @@ Route::get('/features', 'StaticController@features');
 Route::post('/', 'FileController@postFile');
 Route::post('/paste', 'FileController@postPaste');
 
-Route::get('/paste/view', 'FileController@viewPaste');
+Route::get('/view/{file_id}', 'FileController@view');
 
 Route::controller('/auth', 'AuthController');
 Route::controller('/user', 'UserController');

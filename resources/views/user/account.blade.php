@@ -26,57 +26,54 @@
 		<a id="change-username" href="#change-username" class="anchor">#</a>
 		<h4 class="anchor">Change username</h4>
 		<div>
-			<input type="text" name="username" required placeholder="new username">
+			<input type="text" name="username" placeholder="new username" value="{{ $username }}">
 			<aside>
 				<p>If you wish to change your username, you may do so here. Please note that you can only change your username a limited number of times.</p>
 			</aside>
 		</div>
 
 		<hr>
-		<br>
-		<br>
 
 		<a id="change-email-address" href="#change-email-address" class="anchor">#</a>
 		<h4 class="anchor">Change email address</h4>
 		<div>
-			<input type="email" name="email" required placeholder="new email">
+			<input type="email" name="email" placeholder="new email">
 			<aside>
 				<p>If you've lost access to the current email account or would like to use a different one, you can change the address here.</p>
 			</aside>
 		</div>
 		<div>
-			<input type="email" name="email-confirm" required placeholder="confirm email">
+			<input type="email" name="email-confirm" placeholder="confirm email">
 			<aside>
 
 			</aside>
 		</div>
 
 		<hr>
-		<br>
-		<br>
 
 		<a id="update-password" href="#update-password" class="anchor">#</a>
 		<h4 class="anchor">Update password</h4>
 		<div>
-			<input type="password" name="password-current" required placeholder="current password">
+			<input type="password" name="password" placeholder="new password">
 			<aside>
-				<p>For security reasons, please enter your current password so that we can verify if it's you. If you have forgotten your password, you can <a href="/auth/reset">reset your password</a>.</p>
+				<p>Want to change you password to something else, sure thing!</p>
 			</aside>
 		</div>
 		<div>
-			<input type="password" name="password" required placeholder="new password">
-			<aside>
-
-			</aside>
-		</div>
-		<div>
-			<input type="password" name="password-confirm" required placeholder="confirm password">
+			<input type="password" name="password-confirm"placeholder="confirm password">
 			<aside>
 
 			</aside>
 		</div>
 
-		<input type="submit" value="change settings">
+		<div style="display: inline-block; float: left;">
+			<button type="button" style="display: inline-block" onclick="history.back();">cancel</button>
+			<button type="reset" style="display: inline-block">reset</button>
+		</div>
 
+		<div style="display: inline-block; float: right;">
+			<input type="password" name="password-current" required placeholder="current password" style="display: inline-block">
+			<button type="submit" style="display: inline-block">change settings</button>
+		</div>
 	</form>
 @stop
