@@ -59,6 +59,12 @@ class FileController extends Controller {
 		return redirect('/paste/{$paste->id}');
 	}
 
+	public function browse()
+	{
+		$files = File::all();
+		return view('browse', ['page_title' => "browse", 'files' => $files]);
+	}
+
 	public function view($file_id)
 	{
 		$file = File::findOrFail($file_id);
