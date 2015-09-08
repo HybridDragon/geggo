@@ -53,6 +53,13 @@
 			</aside>
 		</div>
 
-		<input type="submit" value="sign me up!">
+		<div style="display: inline-block; float: left;">
+			<button type="button" style="display: inline-block" onclick="history.back();">cancel</button>
+			<button type="reset" style="display: inline-block">reset</button>
+		</div>
+
+		<div style="display: inline-block; float: right;">
+			<button type="submit" style="display: inline-block">sign me up!</button>
+		</div>
 	</form>
 @stop
